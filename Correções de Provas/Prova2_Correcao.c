@@ -200,7 +200,8 @@ int main(){
 					break;
 			case 4: relatorio(humanos, &contHumanos);
 					break;
-			case 0: return 0;
+			case 0: printf("Encerrando o sistema...\n");
+          			return 0;
 			
 			default: printf("Opção invalida...\n");
 					wait();
