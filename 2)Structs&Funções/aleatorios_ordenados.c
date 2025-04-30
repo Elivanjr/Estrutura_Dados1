@@ -12,12 +12,15 @@ int jaSaiu(int vetor[], int *procura, int *size){
 }
 
 void bubbleSort(int vetor[], int *size){
-    for(int i = 0; i < *size-1; i=i+1){
+    for(int i = 0; i < *size-1; i++){
         for(int j = 0; j < *size-i-1; j++){
-        
+            if(vetor[j] > vetor[j+1]){
+                int aux = vetor[j];
+                vetor[j] = vetor[j+1];
+                vetor[j+1] = aux;
+            }
         }
     }
-
 }
 
 int main(){
@@ -32,6 +35,8 @@ int main(){
             i++;
         }
     }
+    bubbleSort(vetor, &tamanho);
+    
     for(int i = 0; i < tamanho; i++){
         printf("[%02i] ", vetor[i]);
     }
